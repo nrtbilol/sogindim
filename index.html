@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sog'indim</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at bottom, #000 60%, #111);
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      perspective: 1000px;
+    }
+
+    .scene {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(25deg);
+    }
+
+    .sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90px;
+      height: 90px;
+      margin: -45px 0 0 -45px;
+      background: radial-gradient(yellow, orange);
+      border-radius: 50%;
+      box-shadow: 0 0 60px 25px orange;
+      z-index: 10;
+    }
+
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px dashed rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      transform-style: preserve-3d;
+    }
+
+    .planet {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    .mercury-orbit {
+      width: 100px;
+      height: 100px;
+      margin: -50px 0 0 -50px;
+      animation: spin 4s linear infinite;
+    }
+
+    .venus-orbit {
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      animation: spin 6s linear infinite;
+    }
+
+    .earth-orbit {
+      width: 200px;
+      height: 200px;
+      margin: -100px 0 0 -100px;
+      animation: spin 8s linear infinite;
+    }
+
+    .mars-orbit {
+      width: 250px;
+      height: 250px;
+      margin: -125px 0 0 -125px;
+      animation: spin 10s linear infinite;
+    }
+
+    .jupiter-orbit {
+      width: 310px;
+      height: 310px;
+      margin: -155px 0 0 -155px;
+      animation: spin 14s linear infinite;
+    }
+
+    .saturn-orbit {
+      width: 380px;
+      height: 380px;
+      margin: -190px 0 0 -190px;
+      animation: spin 18s linear infinite;
+    }
+
+    .uranus-orbit {
+      width: 450px;
+      height: 450px;
+      margin: -225px 0 0 -225px;
+      animation: spin 22s linear infinite;
+    }
+
+    .neptune-orbit {
+      width: 520px;
+      height: 520px;
+      margin: -260px 0 0 -260px;
+      animation: spin 26s linear infinite;
+    }
+
+    .mercury {
+      width: 6px;
+      height: 6px;
+      background: #ccc;
+    }
+
+    .venus {
+      width: 10px;
+      height: 10px;
+      background: #c2b280;
+    }
+
+    .earth {
+      width: 12px;
+      height: 12px;
+      background: #1e90ff;
+    }
+
+    .mars {
+      width: 10px;
+      height: 10px;
+      background: #d14a28;
+    }
+
+    .jupiter {
+      width: 18px;
+      height: 18px;
+      background: #ffa500;
+    }
+
+    .saturn {
+      width: 16px;
+      height: 16px;
+      background: #f5deb3;
+    }
+
+    .uranus {
+      width: 14px;
+      height: 14px;
+      background: #8fd8d8;
+    }
+
+    .neptune {
+      width: 14px;
+      height: 14px;
+      background: #4169e1;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotateY(0deg);
+      }
+
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    .text-box {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 270px;
+      max-height: 45%;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      border: 1px solid white;
+      font-size: 14px;
+      overflow-y: auto;
+      z-index: 50;
+    }
+
+    @media (max-width: 600px) {
+      .text-box {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scene">
+    <div class="sun"></div>
+
+    <div class="orbit mercury-orbit">
+      <div class="planet mercury"></div>
+    </div>
+    <div class="orbit venus-orbit">
+      <div class="planet venus"></div>
+    </div>
+    <div class="orbit earth-orbit">
+      <div class="planet earth"></div>
+    </div>
+    <div class="orbit mars-orbit">
+      <div class="planet mars"></div>
+    </div>
+    <div class="orbit jupiter-orbit">
+      <div class="planet jupiter"></div>
+    </div>
+    <div class="orbit saturn-orbit">
+      <div class="planet saturn"></div>
+    </div>
+    <div class="orbit uranus-orbit">
+      <div class="planet uranus"></div>
+    </div>
+    <div class="orbit neptune-orbit">
+      <div class="planet neptune"></div>
+    </div>
+
+    <div class="text-box">
+      <!-- Shu yerga o'zing yozadigan matnni joylashtir --> <h1> ekranga bos musiqa ewtilad</h1>
+       <h2>qolmda kuguncha chiroyli cqwiga harakt qldm </h2>
+      
+      
+      qalesa yaxshimisa qara krc hammasi uchun uzr sorima hayotnga krb kegnm ucn hafa qganlarm uchun blb blme qgan
+      ishlarm uchun sani sevganm uchun uzr rawk orqasida hafa qganm uchunm krc nma yomo iw qgan bosam sanga mani kecr
+      oylandm san yaxwsiga loyqsa orzuyndagi bolani topasa hali tors rosta sevdm sani mande bowqasi sevadmi yomi blmadmu
+      lekn baxtini topwini holima baxtli bolishini☺ zor qzsan blasanmi buni oqimasa balkim lekn bu qgan saytm uchun br
+      kun ketd wuni blama😂 leknc wuncha orzu qldkku ortada bolalariyam nu bola yetm qold ddyu😂 sani db baxt nimaligni
+      mehr nimaligni bldm rosta etvoma rahmat sanga😁 hudoga oson balkim korwarmz balkm yoq anu gap boridyu esmga kemad
+      krc mani kecr sanga kota rahmat❤ mayl ozni extot ql baxtli bol hamma orzuynga erw balkm bu... lekn
+      sani qaytb bezota qmima
+      moqi bowqasaca barbr <h3 style="color: #9fafa2;">sani telbalarcha sevguchi biloldan❤</h3>
+    </div>
+  </div>
+
+  <audio id="bg-music" autoplay loop muted>
+    <source src="interstella.mp3" type="audio/mpeg">
+    Sizning brauzeringiz audio elementni qollab-quvvatlamaydi.
+  </audio>
+
+  <script>
+    // Foydalanuvchi sahifani bir marta bosgach, musiqa eshitilsin
+    window.addEventListener("click", () => {
+      const audio = document.getElementById("bg-music");
+      audio.muted = false;
+      audio.play();
+    });
+  </script>
+</body>
+
+</html>
